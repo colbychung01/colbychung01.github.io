@@ -1,8 +1,43 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Group 102-02</h1>
-<p>Members: Colby Chung and Aidan Shawyer</p>
-<p>Topic: Crime Map in PG County</p>
-</body>
+<!--
+    This is how to build the CSS-only load animation from loading.io    
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+    This is helpful for showing your client-side users when data is loading,
+    since there's otherwise no sign your app is thinking about something!
+
+    Try placing it at the same level in your element tree as your Submit button
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aidan Shawyers INST 377 Labs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+      </header>
+      <div class="container">
+        <!--Left Section-->
+        <div class="left_section box">
+            <h3>Form Inputs</h3>
+            <form action="/api" class="box main_form">
+                <label for="resto"></label>
+                <input type="text" name="resto" id="resto" />
+            </form>
+        </div>
+        <!--Right Section-->
+        <div class="right_section box">
+          <div class="restaurant_list box" id="restaurant_list">Map</div>
+        </div>
+      </div>
+      <footer class="footer">
+
+    </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
