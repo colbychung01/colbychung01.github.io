@@ -7,6 +7,8 @@ function initMap() {
     }).addTo(map);
     return map;
   }
+
+
 async function getData() {
     const url = 'https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json';
     const options = {
@@ -18,8 +20,9 @@ async function getData() {
     const request = await fetch(url, options); 
 
     const json = await request.json(); 
-   // const reply = json.filter((item) => Boolean(item.clearance_code_inc_type)).filter((item) => Boolean(item.location));
-    return json;
+    const reply = json.filter((item) => Boolean(item.clearance_code_inc_type));
+    //const reply = json.filter((item) => Boolean(item.clearance_code_inc_type)).filter((item) => Boolean(item.location));
+    return reply;
 }
 
 async function mainEvent() {
@@ -28,8 +31,8 @@ async function mainEvent() {
     const dropdown = document.querySelector('#dropdown');
     const form = document.querySelector('#container'); 
     const jsonData = await getData()
+    const filtered = jsonData.filter
     console.table(jsonData);
-    console.log(dropdown[1])
     
 }
 
