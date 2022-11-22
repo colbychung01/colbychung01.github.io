@@ -36,7 +36,7 @@ async function getData(typeofaccident) {
     const request = await fetch(url, options); 
 
     const json = await request.json();
-    const reply = json.filter((item) => item.clearance_code_inc_type === "ACCIDENT") 
+    const reply = json.filter((item) => item.clearance_code_inc_type === typeofaccident) 
     //const reply = json.filter((item) => Boolean(item.clearance_code_inc_type)).filter((item) => Boolean(item.location));
     return reply;
 }
@@ -46,12 +46,14 @@ async function mainEvent() {
     const pageMap = initMap();
     const dropdown = document.getElementById('dropdown');
     const form = document.querySelector('#container'); 
-    const jsonData = await getData()
-    console.log(dropdown)
-    markerPlace(jsonData, pageMap)
+    //const jsonData = await getData()
     //console.table(jsonData);
-    dropdown.addEventListener('click', function(event) {
-        console.log(event.target.value)
+    dropdown.addEventListener('click', async function(event) {
+        const values = event.target.value.toUpperCase()
+        const jsonData = await getData(values)
+        console.log(jsonData)
+        markerPlace(jsonData, pageMap)
+
     })
 
 
