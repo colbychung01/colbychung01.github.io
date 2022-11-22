@@ -9,20 +9,20 @@ function initMap() {
   }
 
 function markerPlace(array, map) {
-console.log('markerPlace', array);
-map.eachLayer((layer) => {
-    if (layer instanceof L.Marker) {
-    layer.remove();
-    }
-});
-array.forEach((item, index) => {
-    const longitude = item.longitude;
-    const latitude = item.latitude;
-    L.marker([longitude, latitude]).addTo(map);
-    if (index === 0) {
-        map.setView([longitude, latitude], 10);
+    map.eachLayer((layer) => {
+        if (layer instanceof L.Marker) {
+            layer.remove();
         }
-});
+    });
+    array.forEach((item, index) => {
+        const longitude = item.longitude;
+        const latitude = item.latitude;
+        L.marker([longitude, latitude]).addTo(map);
+        if (index === 0) {
+            console.log("testing")
+            map.setView([longitude, latitude], 10);
+            }
+    });
 } 
 
 async function getData(typeofaccident) {
