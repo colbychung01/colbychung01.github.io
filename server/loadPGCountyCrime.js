@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export async function loadPGCountyCrimeData(req, res, next) {
     try {
-      const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // remote URL! you can test it in your browser
+      const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?$$app_token=Txb9IadHwTXzjlrNhHkryPDqH'; // remote URL! you can test it in your browser
       const data = await fetch(url); // We're using a library that mimics a browser 'fetch' for simplicity
       const json = await data.json(); // the data isn't json until we access it using dot notation
       const reply = json.filter((item) => Boolean(item.clearance_code_inc_type)).filter((item) => Boolean(item.location));
