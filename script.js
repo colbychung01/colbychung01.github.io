@@ -15,12 +15,12 @@ function markerPlace(array, map) {
         }
     });
     array.forEach((item, index) => {
-        const longitude = item.longitude;
-        const latitude = item.latitude;
-        L.marker([longitude, latitude]).addTo(map);
+        const combined = [item.location.longitude, item.location.latitude]
+        console.log(combined[0])
+        L.marker([combined[1], combined[0]]).addTo(map);
         if (index === 0) {
-            console.log("testing")
-            map.setView([longitude, latitude], 10);
+            console.log('testing')
+            map.setView([combined[1], combined[0]], 10);
             }
     });
 } 
