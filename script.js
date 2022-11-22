@@ -16,7 +16,7 @@ function markerPlace(array, map) {
     });
     array.forEach((item, index) => {
         const combined = [item.location.longitude, item.location.latitude]
-        console.log(combined[0])
+        //console.log(combined[0])
         L.marker([combined[1], combined[0]]).addTo(map);
         if (index === 0) {
             console.log('testing')
@@ -44,11 +44,16 @@ async function getData(typeofaccident) {
 async function mainEvent() {
 
     const pageMap = initMap();
-    const dropdown = document.querySelector('#dropdown');
+    const dropdown = document.getElementById('dropdown');
     const form = document.querySelector('#container'); 
     const jsonData = await getData()
+    console.log(dropdown)
     markerPlace(jsonData, pageMap)
     //console.table(jsonData);
+    dropdown.addEventListener('click', function(event) {
+        console.log(event.target.value)
+    })
+
 
     
 }
