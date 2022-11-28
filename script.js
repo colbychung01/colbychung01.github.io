@@ -19,7 +19,6 @@ function markerPlace(array, map) {
         //console.log(combined[0])
         L.marker([combined[1], combined[0]]).addTo(map);
         if (index === 0) {
-            console.log('testing')
             map.setView([combined[1], combined[0]], 10);
             }
     });
@@ -34,8 +33,14 @@ async function getData(typeofaccident) {
         }
     };
     const request = await fetch(url, options); 
-
     const json = await request.json();
+    if (typeofaccident.includes("|")){
+        console.log("Contains |")
+        const split = typeofaccident.split("|")
+        const reply2 = json.filter((item) => item.clearance_code_inc_type === split[0])
+        const reply3 = json.filter((item) => item.clearance_code_inc_type === split[1])
+        return reply2.concat(reply3)  
+    }
     const reply = json.filter((item) => item.clearance_code_inc_type === typeofaccident) 
     //const reply = json.filter((item) => Boolean(item.clearance_code_inc_type)).filter((item) => Boolean(item.location));
     return reply;
