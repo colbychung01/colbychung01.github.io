@@ -50,7 +50,6 @@ async function mainEvent() {
 
     const pageMap = initMap();
     const dropdown = document.getElementById('dropdown');
-    const form = document.querySelector('#container'); 
     //const jsonData = await getData()
     //console.table(jsonData);
     dropdown.addEventListener('click', async function(event) {
