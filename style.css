@@ -73,6 +73,16 @@ form {
   /* box-shadows are fancy */
 }
 
+.header img {
+  width: 75px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  top: -75px;
+}
+
 .container {
   position: absolute;
   top: 1.8em;;
