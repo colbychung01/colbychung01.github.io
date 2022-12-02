@@ -9,6 +9,13 @@ function initMap() {
   }
 
 function markerPlace(array, map) {
+    // Credit market artwork: https://github.com/pointhi/leaflet-color-markers
+    const redIcon = new L.Icon({
+        iconUrl: 'marker-icon-red.png',
+        shadowUrl: 'marker-shadow.png',
+        iconSize: [25, 41],
+        shadowSize: [41, 41]
+      })      
     map.eachLayer((layer) => {
         if (layer instanceof L.Marker) {
             layer.remove();
@@ -17,7 +24,7 @@ function markerPlace(array, map) {
     array.forEach((item, index) => {
         const combined = [item.location.longitude, item.location.latitude]
         //console.log(combined[0])
-        L.marker([combined[1], combined[0]]).addTo(map);
+        L.marker([combined[1], combined[0]], {icon : redIcon}).addTo(map);
         if (index === 0) {
             map.setView([combined[1], combined[0]], 10);
             }
