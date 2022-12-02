@@ -107,6 +107,7 @@ form {
   position: absolute;
   left: 0;
   top: 10em;
+  z-index: 2;
 }
 
 select {
