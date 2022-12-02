@@ -17,21 +17,25 @@
       <div id="map"></div>
       <header class="header">
         <h1>Prince Georges County Crime Mapping</h1>
+        <img src="PGcounty.png" alt="PGcounty Logo">
       </header>
       <div class="container">
-        <select class="dropdown" id="dropdown">
+        <div class="custom-select">
+        <select id="dropdown">
           <option value="accident" selected="selected">Accident</option>
           <option value ="theft from auto">Theft from Auto</option>
           <option value ="accident with impound">Accident with Impound</option>
           <option value ="theft">Theft</option>
-          <option value ="auto">Auto</option>
+          <option value ="auto, stolen">Auto</option>
           <option value ="assault">Assault</option>
           <option value ="vandalism">Vandalism</option>
-          <option value ="b & e">B & E</option>
-          <option value ="robbery">Robbery</option>
+          <option value ="b & e, residential|b & e commercial">B & E, residential</option>
+          <option value ="robbery, commerical|robbery, other">Robbery</option>
           <option value ="sex offense">Sex Offense</option>
           <option value ="homicide">Homicide</option>
         </select>
+        <span class="custom-arrow"></span>
+      </div>
       </div>
       </div>
     </div>
