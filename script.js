@@ -56,13 +56,12 @@ async function getData(typeofaccident) {
 async function mainEvent() {
 
     const pageMap = initMap();
-    const button = document.getElementById('button')
     //const jsonData = await getData()
     //console.table(jsonData)
 
     var select = document.getElementById('dropdown');
 
-    button.addEventListener('submit', async function(event) {
+    button.addEventListener('button', async function(event) {
         const values = event.target.value.toUpperCase()
         var value = select.value
         const jsonData = await getData(value)
