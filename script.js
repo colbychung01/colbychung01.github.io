@@ -57,12 +57,12 @@ async function mainEvent() {
 
     const pageMap = initMap();
     const dropdown = document.getElementById('dropdown');
-    //const jsonData = await getData()
-    //console.table(jsonData);
+    const submit = document.getElementById('button')
+    console.table(submit);
     dropdown.addEventListener('click', async function(event) {
         const values = event.target.value.toUpperCase()
         const jsonData = await getData(values)
-        console.log(jsonData)
+        console.log(event)
         markerPlace(jsonData, pageMap)
 
     })
