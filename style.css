@@ -163,6 +163,11 @@ form input {
     padding: 1.00rem;
     margin:0;
   }
+  .header img {
+    width: 45px;
+    height: 45px;
+    top: -47px;
+  }
   .container {
     width: 80;
     top: auto;
