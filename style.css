@@ -144,27 +144,52 @@ form input {
     margin-bottom: 0.5rem;
   }
 
+  #map {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    }
+
 /* How To Write A Media Query For Small Screens */
 
 @media only screen and (max-width: 736px){
   /* Rules in here will only apply when a screen is the correct size */
   /* check it out by using your developer tools to shrink your screen-size */
-  .container {
-    background-color: rgba(119, 119, 119, 0.65);
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width:100%
+  .header h1 {
+    font-size: 0.75rem;
+    padding: 1.00rem;
+    margin:0;
   }
+  .container {
+    width: 80;
+    top: auto;
+    font-size: 11px;
+    left: 550px;
+  }
+  .custom-select button {
+    font-size: 11px;
+    position: absolute;
+    left: -52px;
+    top: 15px;
+  }
+  .custom-select select {
+    font-size: 11px;
+    position: absolute;
+    left: -3px;
+    top: 14px;
+  }
+  #map {
+    height: 110%;
+    width: 110%;
+    position: absolute;
+    top: -30;
+    left: 0;
+    z-index: 1;
+    }
 }
 
-#map {
-height: 100%;
-width: 100%;
-position:absolute;
-top: 0;
-left: 0;
-z-index: 1;
-}
 
     
