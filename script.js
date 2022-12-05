@@ -57,18 +57,17 @@ async function mainEvent() {
 
     const pageMap = initMap();
     const dropdown = document.getElementById('dropdown');
-    const submit = document.getElementById('button')
-    console.table(submit);
+    const submits = document.querySelector('#button')
+    console.log(submits);
     dropdown.addEventListener('click', async function(event) {
         const values = event.target.value.toUpperCase()
         const jsonData = await getData(values)
-        console.log(event)
-        markerPlace(jsonData, pageMap)
-
+        submits.addEventListener('click', (submitEvent) => {
+            submitEvent.preventDefault();
+            console.log("please")
+            markerPlace(jsonData, pageMap)
     })
-
-
-    
+    });
 }
 
 document.addEventListener('DOMContentLoaded', async () => mainEvent());
