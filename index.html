@@ -21,29 +21,23 @@
       </header>
       <div class="container">
         <div class="custom-select">
+        <button type="submit" id="button">Submit</button>
         <select id="dropdown">
-          <option value="accident">Accident</option>
+          <option value="accident" selected="selected">Accident</option>
           <option value ="theft from auto">Theft from Auto</option>
           <option value ="accident with impound">Accident with Impound</option>
           <option value ="theft">Theft</option>
-          <option value ="auto, stolen">Auto, stolen</option>
+          <option value ="auto, stolen">Auto</option>
           <option value ="assault">Assault</option>
           <option value ="vandalism">Vandalism</option>
-          <option value ="b & e, residential|b & e commercial">B & E</option>
+          <option value ="b & e, residential|b & e commercial">B & E, residential</option>
           <option value ="robbery, commerical|robbery, other">Robbery</option>
           <option value ="sex offense">Sex Offense</option>
           <option value ="homicide">Homicide</option>
         </select>
         <span class="custom-arrow"></span>
-        </div>
       </div>
-        <div class="left_section box">
-          <h3>Form Inputs</h3>  
-          <form action="/api" class = "box main_form">
-            <label for="resto">Select Crime Type in Dropdown</label>
-            <button type="submit" id="button">Submit</button>
-          </form>
-        </div>
+      </div>
       </div>
     </div>
     <script src="script.js"></script>
