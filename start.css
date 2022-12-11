@@ -1,6 +1,7 @@
 
 .center {
     text-align: center;
+    vertical-align: center;
 }
 
 .center button {
@@ -10,6 +11,6 @@
     width: 150 px;
 }
 .center h1 {
-    font-size: xx-large;
+    font-size: 500px;
     color: #FFFFFF;
 }
